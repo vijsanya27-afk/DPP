@@ -1,8 +1,7 @@
-[
-    {
-        "name":"Sanya Vijay",
-        "mobile":"7855644537",
-        "email":"vhh@gmail.com",
-        "branch":"CSE"
+{
+  "name": "Sanya",
+  "email": "sanya@gmail.com",
+  "mobile": "9876543210",
+  "branch": "CSE",
+  "password": "123456"
 }
-]

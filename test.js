@@ -95,6 +95,8 @@ if (student) {
 // TC-10: Registration success
 if (passed) {
     console.log("TC-10: Registration SUCCESS");
+    process.exit(0);
 } else {
     console.log("TC-10: Registration FAILED");
+    process.exit(1);
 }
