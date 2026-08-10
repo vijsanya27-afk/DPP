@@ -4,7 +4,6 @@ let passed = true;
 
 console.log("Registration testing");
 
-// TC-01: Check HTML file exists
 if (fs.existsSync("index.html")) {
     console.log("TC-01: index.html file exists");
 } else {
@@ -12,7 +11,6 @@ if (fs.existsSync("index.html")) {
     passed = false;
 }
 
-// TC-02: Check CSS file exists
 if (fs.existsSync("style.css")) {
     console.log("TC-02: style.css file exists");
 } else {
@@ -20,7 +18,6 @@ if (fs.existsSync("style.css")) {
     passed = false;
 }
 
-// TC-03: Check JS file exists
 if (fs.existsSync("script.js")) {
     console.log("TC-03: script.js file exists");
 } else {
@@ -28,7 +25,6 @@ if (fs.existsSync("script.js")) {
     passed = false;
 }
 
-// TC-04: Check students.json file exists
 if (fs.existsSync("students.json")) {
     console.log("TC-04: students.json file exists");
 } else {
@@ -36,7 +32,6 @@ if (fs.existsSync("students.json")) {
     passed = false;
 }
 
-// Read student.json
 let student;
 
 try {
@@ -48,10 +43,9 @@ try {
     passed = false;
 }
 
-// Validation only if student data is available
 if (student) {
 
-    // TC-05: Name validation
+  
     if (student.name && student.name.trim() !== "") {
         console.log("TC-05: Name Validation PASS");
     } else {
@@ -59,7 +53,7 @@ if (student) {
         passed = false;
     }
 
-    // TC-06: Email validation
+    
     if (student.email && student.email.includes("@")) {
         console.log("TC-06: Email Validation PASS");
     } else {
@@ -67,7 +61,6 @@ if (student) {
         passed = false;
     }
 
-    // TC-07: Mobile validation
     if (student.mobile && student.mobile.toString().length === 10) {
         console.log("TC-07: Mobile Validation PASS");
     } else {
@@ -75,7 +68,6 @@ if (student) {
         passed = false;
     }
 
-    // TC-08: Branch validation
     if (student.branch && student.branch.trim() !== "") {
         console.log("TC-08: Branch Validation PASS");
     } else {
@@ -83,8 +75,7 @@ if (student) {
         passed = false;
     }
 
-    // TC-09: Password validation
-    if (student.password && student.password.length >= 6) {
+if (student.password && student.password.length >= 6) {
         console.log("TC-09: Password Validation PASS");
     } else {
         console.log("TC-09: Password Validation FAIL");
@@ -92,7 +83,6 @@ if (student) {
     }
 }
 
-// TC-10: Registration success
 if (passed) {
     console.log("TC-10: Registration SUCCESS");
     process.exit(0);

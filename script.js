@@ -14,14 +14,13 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     message.style.color = "red";
     message.innerHTML = "";
 
-    // Validation
     if (name === "") {
         message.innerHTML = "Student Name is required.";
         return;
     }
-
-    if (email === "") {
-        message.innerHTML = "Email is required.";
+    
+    if (!/^[A-Za-z]+( [A-Za-z]+)*$/.test(name)) {
+        message.innerHTML = "Student Name should contain only alphabets.";
         return;
     }
 
